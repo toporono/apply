@@ -1,0 +1,1161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Freelance SEA Specialist – Fluent German, B2B SaaS | Search Engine Advertising (Remote)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: linear-gradient(180deg, #050608 0%, #0A0B14 100%);
+    min-height: 100vh;
+    color: #fff;
+  }
+  #bg-canvas {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    display: block;
+  }
+  .wrap {
+    position: relative;
+    z-index: 10;
+    padding: 48px 20px 80px;
+  }
+  .card {
+    position: relative;
+    z-index: 10;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 48px 40px;
+    background: rgba(255, 255, 255, 0.03);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    box-shadow: 0 32px 64px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(79, 110, 247, 0.1);
+    opacity: 0;
+  }
+  .logo-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 32px;
+    opacity: 0;
+    perspective: 600px;
+  }
+  .logo-3d {
+    display: block;
+    max-height: 52px;
+    max-width: 220px;
+    filter:
+      drop-shadow(0 6px 20px rgba(79, 110, 247, 0.55))
+      drop-shadow(0 2px 6px rgba(0, 0, 0, 0.7));
+    transform: perspective(600px) rotateX(6deg) translateY(-2px);
+    transition: transform 0.35s ease, filter 0.35s ease;
+  }
+  .logo-wrap:hover .logo-3d {
+    transform: perspective(600px) rotateX(0deg) scale(1.04);
+    filter:
+      drop-shadow(0 10px 32px rgba(79, 110, 247, 0.7))
+      drop-shadow(0 3px 10px rgba(0, 0, 0, 0.6));
+  }
+  .hiring-label {
+    display: block;
+    text-align: center;
+    color: #4F6EF7;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    opacity: 0;
+  }
+  .role-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12px;
+    opacity: 0;
+  }
+  .role-desc {
+    text-align: center;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.45);
+    margin-bottom: 40px;
+    line-height: 1.6;
+    opacity: 0;
+  }
+  form { display: block; }
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  /* ── Mobile & Tablet ─────────────────────────── */
+  @media (max-width: 680px) {
+    .wrap { padding: 24px 12px 60px; }
+    .card { padding: 28px 18px; border-radius: 18px; }
+    .role-title { font-size: 22px; line-height: 1.3; }
+    .role-desc { font-size: 14px; margin-bottom: 28px; }
+    .logo-3d { max-height: 40px; }
+    .logo-wrap { margin-bottom: 22px; }
+    .grid-2 { grid-template-columns: 1fr; gap: 12px; }
+    input, textarea, select { font-size: 16px !important; padding: 16px 14px; border-radius: 10px; }
+    select { padding-right: 40px; }
+    .choice-card { padding: 16px 14px; font-size: 15px; min-height: 52px; display: flex; align-items: center; }
+    .yesno-group { gap: 10px; }
+    .num-stepper button { width: 52px; height: 58px; font-size: 26px; }
+    .num-stepper input[type="number"] { font-size: 28px; }
+    .submit-btn { height: 58px; font-size: 16px; border-radius: 14px; }
+    label { font-size: 14px; margin-bottom: 10px; }
+    .divider { margin: 28px 0 22px; }
+    #cv-upload-area { padding: 24px 16px; }
+  }
+  @media (max-width: 400px) {
+    .card { padding: 22px 14px; }
+    .role-title { font-size: 19px; }
+  }
+  @media (min-width: 681px) and (max-width: 1024px) {
+    .wrap { padding: 36px 24px 60px; }
+    .card { padding: 40px 32px; }
+  }
+  .field { margin-bottom: 20px; }
+  label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 8px;
+  }
+  input, textarea, select {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 14px 16px;
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+    outline: none;
+  }
+  input::placeholder, textarea::placeholder { color: rgba(255, 255, 255, 0.25); }
+  input:focus, textarea:focus, select:focus {
+    border: 1px solid #4F6EF7;
+    box-shadow: 0 0 0 3px rgba(79, 110, 247, 0.15);
+  }
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%238B8FA8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 44px;
+    cursor: pointer;
+  }
+  select option { background: #12141A; color: #fff; }
+  textarea { resize: vertical; min-height: 108px; }
+  .err-msg {
+    display: none;
+    color: #EF4444;
+    font-size: 12px;
+    margin-top: 6px;
+  }
+  .field.invalid input,
+  .field.invalid textarea,
+  .field.invalid select { border-color: #EF4444; }
+  .field.invalid .err-msg { display: block; }
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 36px 0 28px;
+  }
+  .divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(79, 110, 247, 0.4);
+  }
+  .divider span {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #4F6EF7;
+    white-space: nowrap;
+  }
+  /* Number stepper */
+  .num-stepper {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+  }
+  .num-stepper:focus-within {
+    border-color: #4F6EF7;
+    box-shadow: 0 0 0 3px rgba(79, 110, 247, 0.15);
+  }
+  .num-stepper button {
+    width: 56px;
+    height: 56px;
+    background: rgba(79, 110, 247, 0.08);
+    border: none;
+    color: #4F6EF7;
+    font-size: 24px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: background 150ms ease;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .num-stepper button:hover { background: rgba(79, 110, 247, 0.18); }
+  .num-stepper button:active { background: rgba(79, 110, 247, 0.28); }
+  .num-stepper input[type="number"] {
+    flex: 1;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    color: #fff;
+    width: 100%;
+    min-width: 0;
+    box-shadow: none;
+    -moz-appearance: textfield;
+  }
+  .num-stepper input[type="number"]::-webkit-outer-spin-button,
+  .num-stepper input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+  .num-stepper input[type="number"]::placeholder { color: rgba(255,255,255,0.25); font-size: 17px; font-weight: 400; }
+  .num-stepper input[type="number"]:focus { outline: none; border: none; box-shadow: none; }
+  .num-hint { font-size: 12px; color: rgba(255,255,255,0.3); margin-top: 6px; text-align: center; }
+  .choice-group { display: grid; gap: 10px; }
+  .choice-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.85);
+    cursor: pointer;
+    transition: all 150ms ease;
+    user-select: none;
+  }
+  .choice-card:hover { border-color: rgba(79, 110, 247, 0.5); }
+  .choice-card.selected {
+    border-color: #4F6EF7;
+    background: rgba(79, 110, 247, 0.12);
+    box-shadow: 0 0 0 3px rgba(79, 110, 247, 0.12);
+    color: #fff;
+  }
+  .yesno-group { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .yesno-detail { margin-top: 10px; display: none; }
+  .yesno-detail.visible { display: block; }
+  .submit-btn {
+    width: 100%;
+    height: 56px;
+    background: #4F6EF7;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    border: none;
+    border-radius: 12px;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background 150ms ease, transform 150ms ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .submit-btn:hover:not(:disabled) { background: #3D5BE0; transform: translateY(-2px); }
+  .submit-btn:disabled { opacity: 0.7; cursor: default; }
+  .submit-btn.pulse { animation: pulse 2s ease-in-out infinite; }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+  }
+  .spinner {
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .form-error {
+    display: none;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.35);
+    color: #FCA5A5;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 13px;
+    margin-top: 16px;
+    line-height: 1.5;
+  }
+  /* Language autocomplete + chips */
+  .lang-wrap { position: relative; }
+  .lang-input-wrap {
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    cursor: text;
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+  }
+  .lang-input-wrap:focus-within {
+    border-color: #4F6EF7;
+    box-shadow: 0 0 0 3px rgba(79, 110, 247, 0.15);
+  }
+  .field.invalid .lang-input-wrap { border-color: #EF4444; }
+  .lang-input-wrap input[type="text"] {
+    flex: 1;
+    min-width: 120px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 4px 4px;
+    box-shadow: none;
+    font-size: 15px;
+    color: #fff;
+    outline: none;
+  }
+  .lang-input-wrap input[type="text"]:focus { border: none; box-shadow: none; }
+  @media (max-width: 680px) {
+    .lang-input-wrap input[type="text"] { font-size: 16px; }
+  }
+  .lang-chips { display: contents; }
+  .lang-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(79, 110, 247, 0.15);
+    border: 1px solid rgba(79, 110, 247, 0.35);
+    border-radius: 999px;
+    padding: 3px 8px 3px 11px;
+    font-size: 13px;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .lang-chip-x {
+    display: flex; align-items: center; justify-content: center;
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    cursor: pointer;
+    font-size: 11px; color: rgba(255,255,255,0.7);
+    transition: background 100ms ease;
+    flex-shrink: 0;
+  }
+  .lang-chip-x:hover { background: rgba(239,68,68,0.35); color: #fff; }
+  .lang-dropdown {
+    position: absolute;
+    left: 0; right: 0;
+    top: calc(100% + 4px);
+    z-index: 200;
+    background: #12141A;
+    border: 1px solid rgba(79, 110, 247, 0.3);
+    border-radius: 10px;
+    max-height: 220px;
+    overflow-y: auto;
+    display: none;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  }
+  .lang-dropdown.open { display: block; }
+  .lang-option {
+    padding: 9px 16px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.8);
+    cursor: pointer;
+    transition: background 100ms ease;
+  }
+  .lang-option:hover, .lang-option.hl { background: rgba(79,110,247,0.15); color: #fff; }
+  .lang-option.lang-added { opacity: 0.38; cursor: default; }
+  .lang-no-results { padding: 10px 16px; font-size: 13px; color: rgba(255,255,255,0.35); }
+
+  /* Confirmation screen */
+  #confirmation { display: none; text-align: center; }
+  .check-wrap { margin: 8px auto 28px; width: 80px; height: 80px; }
+  .check-circle {
+    stroke: #4F6EF7;
+    stroke-width: 3;
+    fill: none;
+    stroke-dasharray: 251;
+    stroke-dashoffset: 251;
+    animation: drawCircle 0.8s ease-out forwards;
+  }
+  .check-mark {
+    stroke: #fff;
+    stroke-width: 4;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 60;
+    stroke-dashoffset: 60;
+    animation: drawCheck 0.5s ease-out 0.5s forwards;
+  }
+  @keyframes drawCircle { to { stroke-dashoffset: 0; } }
+  @keyframes drawCheck { to { stroke-dashoffset: 0; } }
+  .conf-title { font-size: 28px; font-weight: 700; color: #fff; margin-bottom: 16px; }
+  .conf-text {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.7;
+    max-width: 480px;
+    margin: 0 auto 28px;
+  }
+  .conf-meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 10px;
+  }
+  .conf-note { font-size: 13px; color: rgba(255, 255, 255, 0.4); margin-bottom: 28px; }
+  .conf-divider { height: 1px; background: rgba(255, 255, 255, 0.08); margin: 0 auto 28px; max-width: 480px; }
+  .ghost-btn {
+    display: inline-block;
+    background: transparent;
+    border: 1px solid #4F6EF7;
+    color: #4F6EF7;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    padding: 13px 28px;
+    border-radius: 12px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 150ms ease;
+  }
+  .ghost-btn:hover { background: rgba(79, 110, 247, 0.1); }
+</style>
+</head>
+<body>
+<canvas id="bg-canvas"></canvas>
+
+<div class="wrap">
+  <div class="card" id="card">
+    <div id="form-content">
+      <div class="logo-wrap" id="logo-wrap" style="display: none">
+        <img class="logo-3d" id="logo" src="" alt="Logo" />
+      </div>
+      <span class="hiring-label" id="hiring-label">Now Hiring</span>
+      <h1 class="role-title" id="role-title">Freelance SEA Specialist – Fluent German, B2B SaaS | Search Engine Advertising (Remote)</h1>
+      <p class="role-desc" id="role-desc">About the job NOTE: This role requires professional fluency in both German and English.</p>
+
+      <form id="apply-form" novalidate>
+        <div class="grid-2">
+          <div class="field" data-name="firstName">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" autocomplete="given-name" />
+            <div class="err-msg">Please enter your first name.</div>
+          </div>
+          <div class="field" data-name="lastName">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" autocomplete="family-name" />
+            <div class="err-msg">Please enter your last name.</div>
+          </div>
+        </div>
+        <div class="field" data-name="email">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" autocomplete="email" />
+          <div class="err-msg">Please enter a valid email address.</div>
+        </div>
+        <div class="field" data-name="phone">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel" />
+          <div class="err-msg">Please enter your phone number.</div>
+        </div>
+        <div class="field" data-name="country">
+          <label for="country">Country of Residence</label>
+          <select id="country" name="country">
+            <option value="">Select your country</option>
+          </select>
+          <div class="err-msg">Please select your country.</div>
+        </div>
+        <div class="field" data-name="languages">
+          <label>Languages You Speak</label>
+          <div class="lang-wrap">
+            <div class="lang-input-wrap" id="lang-input-wrap" onclick="document.getElementById('lang-search').focus()">
+              <div class="lang-chips" id="lang-chips"></div>
+              <input type="text" id="lang-search" autocomplete="off" placeholder="Type a language to add…" />
+            </div>
+            <input type="hidden" id="languages" name="languages" value="" />
+            <div class="lang-dropdown" id="lang-dropdown"></div>
+          </div>
+          <div class="err-msg">Please add at least one language.</div>
+        </div>
+        <div class="field" data-name="linkedin">
+          <label for="linkedin">LinkedIn Profile URL</label>
+          <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/your-profile" />
+          <div class="err-msg">Please enter a valid LinkedIn URL starting with https://linkedin.com or https://www.linkedin.com.</div>
+        </div>
+        <div class="field" data-name="cvFile">
+          <label>CV / Resume <span style="color:rgba(255,255,255,0.35);font-weight:400;">(PDF, DOC, DOCX)</span></label>
+          <div id="cv-upload-area" style="border:1px dashed rgba(255,255,255,0.15);border-radius:10px;padding:20px;text-align:center;cursor:pointer;transition:border-color 150ms ease;position:relative;" onclick="document.getElementById('cvFileInput').click()">
+            <input type="file" id="cvFileInput" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" style="display:none" />
+            <div id="cv-placeholder" style="color:rgba(255,255,255,0.35);font-size:14px;">
+              <svg style="margin:0 auto 8px;display:block;" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+              Click to upload your CV
+            </div>
+            <div id="cv-selected" style="display:none;color:#4F6EF7;font-size:14px;font-weight:500;"></div>
+          </div>
+          <div class="err-msg" id="cv-err">Please upload your CV.</div>
+        </div>
+
+        <div class="divider"><span>Screening Questions</span></div>
+        <div id="questions"></div>
+
+        <button type="submit" class="submit-btn pulse" id="submit-btn">Apply Now</button>
+        <div class="form-error" id="form-error"></div>
+      </form>
+    </div>
+
+    <div id="confirmation">
+      <div class="check-wrap">
+        <svg viewBox="0 0 84 84" width="80" height="80">
+          <circle class="check-circle" cx="42" cy="42" r="40"></circle>
+          <path class="check-mark" d="M26 44 L38 55 L59 31"></path>
+        </svg>
+      </div>
+      <h2 class="conf-title">Application Received</h2>
+      <p class="conf-text" id="conf-text"></p>
+      <div class="conf-meta">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <span id="conf-date"></span>
+      </div>
+      <p class="conf-note" id="conf-note"></p>
+      <div class="conf-divider"></div>
+      <a class="ghost-btn" href="https://www.linkedin.com" target="_blank" rel="noopener">View Our LinkedIn Page</a>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script>
+// ---- Config injected by the management tool ----
+var CONFIG = {
+  roleTitle: "Freelance SEA Specialist – Fluent German, B2B SaaS | Search Engine Advertising (Remote)",
+  sheetTab: "Freelance SEA Specialist – Fluent German, B2B SaaS | Search Engine Advertising (Remote)",
+  sheetId: "1wwdvrI5YM4s7Ae8poKLVEO7Wf2HTgSvCMmA143Qq4r8",
+  sheetsApiKey: "AIzaSyDgw4L9MpsA0PwoOYJy47Zc9rJwkQ5j5MM",
+  appsScriptUrl: "https://script.google.com/macros/s/AKfycbwdqzv0_wn58zEJmYd_H7si5B0jBzFKFKQs_ttyDjs5BmTTzIqGISq9rtqjZiuv1u3ysg/exec",
+  questions: [{"question":"Are you fully fluent in both German and English for setting up and writing B2B ad campaigns?","type":"yesno","required":true},{"question":"Walk us through a B2B SaaS Google Ads campaign you scaled. What was the campaign structure, and how did you improve the Cost-Per-Lead (CPL)?","type":"text","required":true},{"question":"What is your hourly rate in EUR?","type":"number","required":true,"min":40,"max":100,"placeholder":"e.g. 55"},{"question":"Do you have a link to a past campaign case study, or could you briefly share a performance metric of a B2B SaaS account you managed?","type":"text","required":false},{"question":"Are you registered as a freelancer or self-employed in your country?","type":"yesno","required":true}],
+  countries: ["Afghanistan","Albania","Algeria","Andorra","Angola","Antigua and Barbuda","Argentina","Armenia","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bhutan","Bolivia","Bosnia and Herzegovina","Botswana","Brazil","Brunei","Bulgaria","Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Canada","Central African Republic","Chad","Chile","China","Colombia","Comoros","Congo (Democratic Republic)","Congo (Republic)","Costa Rica","Cote d'Ivoire","Croatia","Cuba","Cyprus","Czechia","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Eswatini","Ethiopia","Fiji","Finland","France","Gabon","Gambia","Georgia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea","Guinea-Bissau","Guyana","Haiti","Honduras","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Zealand","Nicaragua","Niger","Nigeria","North Korea","North Macedonia","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Qatar","Romania","Russia","Rwanda","Saint Kitts and Nevis","Saint Lucia","Saint Vincent and the Grenadines","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor-Leste","Togo","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Yemen","Zambia","Zimbabwe"]
+};
+
+// ---- CV file upload UI ----
+var selectedCvFile = null;
+document.getElementById('cvFileInput').addEventListener('change', function(e) {
+  var file = e.target.files[0];
+  if (!file) return;
+  selectedCvFile = file;
+  document.getElementById('cv-placeholder').style.display = 'none';
+  document.getElementById('cv-selected').style.display = 'block';
+  document.getElementById('cv-selected').textContent = '✓ ' + file.name;
+  document.getElementById('cv-upload-area').style.borderColor = '#4F6EF7';
+  document.querySelector('.field[data-name="cvFile"]').classList.remove('invalid');
+});
+
+// ---- Three.js 3D background ----
+(function initBackground() {
+  if (typeof THREE === 'undefined') return;
+  var canvas = document.getElementById('bg-canvas');
+  var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setClearColor(0x000000, 0);
+
+  var scene = new THREE.Scene();
+  var camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 100);
+  camera.position.set(0, 0, 5);
+  camera.lookAt(0, 0, 0);
+
+  scene.add(new THREE.AmbientLight(0x4F6EF7, 0.3));
+  var point = new THREE.PointLight(0x4F6EF7, 1.0);
+  point.position.set(10, 10, 10);
+  scene.add(point);
+
+  var colors = [0x4F6EF7, 0x3D5BE0, 0x1E2028, 0x2A3080];
+  var geos = [
+    function () { return new THREE.IcosahedronGeometry(1.2, 0); },
+    function () { return new THREE.OctahedronGeometry(1.1, 0); },
+    function () { return new THREE.TetrahedronGeometry(1.2, 0); },
+    function () { return new THREE.TorusKnotGeometry(0.7, 0.22, 64, 8); }
+  ];
+  var objects = [];
+  var count = 15 + Math.floor(Math.random() * 11); // 15-25
+  for (var i = 0; i < count; i++) {
+    var geo = geos[i % geos.length]();
+    var mat = new THREE.MeshStandardMaterial({
+      color: colors[Math.floor(Math.random() * colors.length)],
+      wireframe: Math.random() < 0.5,
+      transparent: true,
+      opacity: 0.15 + Math.random() * 0.25
+    });
+    var mesh = new THREE.Mesh(geo, mat);
+    mesh.position.set(
+      -20 + Math.random() * 40,
+      -20 + Math.random() * 40,
+      -30 + Math.random() * 20
+    );
+    mesh.userData = {
+      rx: 0.001 + Math.random() * 0.004,
+      ry: 0.001 + Math.random() * 0.004,
+      drift: 0.002 + Math.random() * 0.003
+    };
+    scene.add(mesh);
+    objects.push(mesh);
+  }
+
+  function animate() {
+    requestAnimationFrame(animate);
+    for (var j = 0; j < objects.length; j++) {
+      var o = objects[j];
+      o.rotation.x += o.userData.rx;
+      o.rotation.y += o.userData.ry;
+      o.position.y += o.userData.drift;
+      if (o.position.y > 22) o.position.y = -22;
+    }
+    renderer.render(scene, camera);
+  }
+  animate();
+
+  window.addEventListener('resize', function () {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  });
+})();
+
+// ---- Entrance animations ----
+(function entrance() {
+  if (typeof gsap === 'undefined') {
+    document.getElementById('card').style.opacity = 1;
+    ['logo-wrap', 'hiring-label', 'role-title', 'role-desc'].forEach(function (id) {
+      document.getElementById(id).style.opacity = 1;
+    });
+    return;
+  }
+  gsap.to('#logo-wrap', { opacity: 1, duration: 0.6, delay: 0.1 });
+  gsap.fromTo('#card', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out', delay: 0.3 });
+  gsap.to('#hiring-label', { opacity: 1, duration: 0.5, delay: 0.7 });
+  gsap.to('#role-title', { opacity: 1, duration: 0.5, delay: 0.85 });
+  gsap.to('#role-desc', { opacity: 1, duration: 0.5, delay: 1.0 });
+})();
+
+// Stop the submit button pulse after 5 seconds.
+setTimeout(function () {
+  document.getElementById('submit-btn').classList.remove('pulse');
+}, 5000);
+
+// ---- Populate country dropdown ----
+(function countries() {
+  var sel = document.getElementById('country');
+  CONFIG.countries.forEach(function (c) {
+    var opt = document.createElement('option');
+    opt.value = c;
+    opt.textContent = c;
+    sel.appendChild(opt);
+  });
+})();
+
+// ---- Language autocomplete ----
+var LANGUAGES = [
+  'Schweizerdeutsch (Swiss German)',
+  'Afrikaans', 'Albanian', 'Amharic', 'Arabic', 'Armenian', 'Azerbaijani',
+  'Basque', 'Belarusian', 'Bengali', 'Bosnian', 'Bulgarian',
+  'Catalan', 'Cebuano', 'Chinese (Cantonese)', 'Chinese (Mandarin)', 'Croatian', 'Czech',
+  'Danish', 'Dutch',
+  'English', 'Estonian',
+  'Finnish', 'Flemish', 'French', 'Frisian',
+  'Galician', 'Georgian', 'German', 'Greek', 'Gujarati',
+  'Hausa', 'Hebrew', 'Hindi', 'Hungarian',
+  'Icelandic', 'Igbo', 'Indonesian', 'Irish', 'Italian',
+  'Japanese', 'Javanese',
+  'Kannada', 'Kazakh', 'Khmer', 'Korean', 'Kurdish', 'Kyrgyz',
+  'Lao', 'Latvian', 'Lithuanian', 'Luxembourgish',
+  'Macedonian', 'Malagasy', 'Malay', 'Malayalam', 'Maltese', 'Marathi', 'Mongolian', 'Montenegrin',
+  'Nepali', 'Norwegian (Bokmål)', 'Norwegian (Nynorsk)',
+  'Pashto', 'Persian (Farsi)', 'Polish', 'Portuguese (Brazil)', 'Portuguese (Portugal)', 'Punjabi',
+  'Romanian', 'Russian',
+  'Scottish Gaelic', 'Serbian', 'Sinhalese', 'Slovak', 'Slovenian', 'Somali',
+  'Spanish', 'Swahili', 'Swedish',
+  'Tagalog (Filipino)', 'Tajik', 'Tamil', 'Telugu', 'Thai', 'Tibetan', 'Turkish', 'Turkmen',
+  'Ukrainian', 'Urdu', 'Uzbek',
+  'Vietnamese',
+  'Welsh',
+  'Xhosa',
+  'Yoruba',
+  'Zulu'
+];
+
+(function langAutocomplete() {
+  var searchEl   = document.getElementById('lang-search');
+  var dropdown   = document.getElementById('lang-dropdown');
+  var chipsEl    = document.getElementById('lang-chips');
+  var hiddenInput = document.getElementById('languages');
+  var selected   = [];
+  var hlIndex    = -1;
+
+  function updateHidden() {
+    hiddenInput.value = selected.join(', ');
+  }
+
+  function renderChips() {
+    chipsEl.innerHTML = '';
+    selected.forEach(function(lang) {
+      var chip = document.createElement('span');
+      chip.className = 'lang-chip';
+      var txt = document.createTextNode(lang);
+      chip.appendChild(txt);
+      var x = document.createElement('span');
+      x.className = 'lang-chip-x';
+      x.innerHTML = '&times;';
+      x.addEventListener('click', function(e) {
+        e.stopPropagation();
+        selected = selected.filter(function(l) { return l !== lang; });
+        renderChips();
+        updateHidden();
+      });
+      chip.appendChild(x);
+      chipsEl.appendChild(chip);
+    });
+  }
+
+  function getMatches(q) {
+    if (!q) return [];
+    var lower = q.toLowerCase();
+    return LANGUAGES.filter(function(l) {
+      return l.toLowerCase().indexOf(lower) !== -1;
+    }).slice(0, 12);
+  }
+
+  function renderDropdown(matches) {
+    dropdown.innerHTML = '';
+    hlIndex = -1;
+    if (matches.length === 0) {
+      var no = document.createElement('div');
+      no.className = 'lang-no-results';
+      no.textContent = 'No languages found';
+      dropdown.appendChild(no);
+    } else {
+      matches.forEach(function(lang) {
+        var isAdded = selected.indexOf(lang) !== -1;
+        var opt = document.createElement('div');
+        opt.className = 'lang-option' + (isAdded ? ' lang-added' : '');
+        opt.textContent = lang + (isAdded ? ' ✓' : '');
+        if (!isAdded) {
+          opt.addEventListener('mousedown', function(e) {
+            e.preventDefault();
+            selected.push(lang);
+            renderChips();
+            updateHidden();
+            var langField = document.querySelector('.field[data-name="languages"]');
+            if (langField) langField.classList.remove('invalid');
+            searchEl.value = '';
+            closeDropdown();
+            searchEl.focus();
+          });
+        }
+        dropdown.appendChild(opt);
+      });
+    }
+    dropdown.classList.add('open');
+  }
+
+  function closeDropdown() {
+    dropdown.classList.remove('open');
+    dropdown.innerHTML = '';
+    hlIndex = -1;
+  }
+
+  searchEl.addEventListener('input', function() {
+    var q = searchEl.value.trim();
+    if (!q) { closeDropdown(); return; }
+    renderDropdown(getMatches(q));
+  });
+
+  searchEl.addEventListener('keydown', function(e) {
+    var opts = dropdown.querySelectorAll('.lang-option:not(.lang-added)');
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      hlIndex = Math.min(hlIndex + 1, opts.length - 1);
+      opts.forEach(function(o, i) { o.classList.toggle('hl', i === hlIndex); });
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      hlIndex = Math.max(hlIndex - 1, -1);
+      opts.forEach(function(o, i) { o.classList.toggle('hl', i === hlIndex); });
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      if (hlIndex >= 0 && opts[hlIndex]) {
+        opts[hlIndex].dispatchEvent(new MouseEvent('mousedown'));
+      }
+    } else if (e.key === 'Escape') {
+      closeDropdown();
+    }
+  });
+
+  searchEl.addEventListener('blur', function() {
+    setTimeout(closeDropdown, 160);
+  });
+})();
+
+// ---- Render screening questions ----
+var answers = {};
+(function renderQuestions() {
+  var container = document.getElementById('questions');
+  CONFIG.questions.forEach(function (q, idx) {
+    var field = document.createElement('div');
+    field.className = 'field';
+    field.dataset.qindex = idx;
+
+    var label = document.createElement('label');
+    label.textContent = (idx + 1) + '. ' + q.question + (q.required === false ? ' (Optional)' : '');
+    field.appendChild(label);
+
+    if (q.type === 'multiplechoice' && q.options && q.options.length) {
+      var group = document.createElement('div');
+      group.className = 'choice-group';
+      q.options.forEach(function (opt) {
+        var cardEl = document.createElement('div');
+        cardEl.className = 'choice-card';
+        cardEl.textContent = opt;
+        cardEl.addEventListener('click', function () {
+          group.querySelectorAll('.choice-card').forEach(function (c) { c.classList.remove('selected'); });
+          cardEl.classList.add('selected');
+          answers[idx] = opt;
+          field.classList.remove('invalid');
+        });
+        group.appendChild(cardEl);
+      });
+      field.appendChild(group);
+    } else if (q.type === 'number') {
+      var stepper = document.createElement('div');
+      stepper.className = 'num-stepper';
+      var minVal = (q.min != null) ? Number(q.min) : 0;
+      var maxVal = (q.max != null) ? Number(q.max) : 9999;
+      var numInput = document.createElement('input');
+      numInput.type = 'number';
+      numInput.min = minVal;
+      numInput.max = maxVal;
+      numInput.placeholder = q.placeholder || '—';
+      numInput.addEventListener('input', function () {
+        var n = numInput.value.trim();
+        answers[idx] = n;
+        if (n) field.classList.remove('invalid');
+      });
+      var btnMinus = document.createElement('button');
+      btnMinus.type = 'button';
+      btnMinus.innerHTML = '&#8722;';
+      btnMinus.addEventListener('click', function () {
+        var cur = Number(numInput.value) || minVal;
+        var next = Math.max(minVal, cur - 1);
+        numInput.value = next;
+        answers[idx] = String(next);
+        field.classList.remove('invalid');
+      });
+      var btnPlus = document.createElement('button');
+      btnPlus.type = 'button';
+      btnPlus.innerHTML = '&#43;';
+      btnPlus.addEventListener('click', function () {
+        var cur = Number(numInput.value) || (minVal - 1);
+        var next = Math.min(maxVal, cur + 1);
+        numInput.value = next;
+        answers[idx] = String(next);
+        field.classList.remove('invalid');
+      });
+      stepper.appendChild(btnMinus);
+      stepper.appendChild(numInput);
+      stepper.appendChild(btnPlus);
+      field.appendChild(stepper);
+      if (q.min != null && q.max != null) {
+        var hint = document.createElement('div');
+        hint.className = 'num-hint';
+        hint.textContent = 'Range: ' + q.min + ' – ' + q.max;
+        field.appendChild(hint);
+      }
+    } else if (q.type === 'yesno') {
+      var yn = document.createElement('div');
+      yn.className = 'yesno-group';
+      var detail = document.createElement('textarea');
+      detail.className = 'yesno-detail';
+      detail.rows = 3;
+      detail.placeholder = 'Please give a bit more detail.';
+      ['Yes', 'No'].forEach(function (val) {
+        var cardEl = document.createElement('div');
+        cardEl.className = 'choice-card';
+        cardEl.style.textAlign = 'center';
+        cardEl.textContent = val;
+        cardEl.addEventListener('click', function () {
+          yn.querySelectorAll('.choice-card').forEach(function (c) { c.classList.remove('selected'); });
+          cardEl.classList.add('selected');
+          answers[idx] = val;
+          field.classList.remove('invalid');
+          if (val === 'Yes') detail.classList.add('visible');
+          else detail.classList.remove('visible');
+        });
+        yn.appendChild(cardEl);
+      });
+      detail.addEventListener('input', function () {
+        answers[idx + '_detail'] = detail.value;
+      });
+      field.appendChild(yn);
+      field.appendChild(detail);
+    } else {
+      var ta = document.createElement('textarea');
+      ta.rows = 4;
+      ta.addEventListener('input', function () {
+        answers[idx] = ta.value;
+        if (ta.value.trim()) field.classList.remove('invalid');
+      });
+      field.appendChild(ta);
+    }
+
+    var err = document.createElement('div');
+    err.className = 'err-msg';
+    err.textContent = 'Please answer this question.';
+    field.appendChild(err);
+    container.appendChild(field);
+  });
+})();
+
+// ---- Validation ----
+function validate() {
+  var ok = true;
+  function mark(name, valid) {
+    var field = document.querySelector('.field[data-name="' + name + '"]');
+    if (!field) return;
+    field.classList.toggle('invalid', !valid);
+    if (!valid) ok = false;
+  }
+  var v = function (id) { return document.getElementById(id).value.trim(); };
+
+  mark('firstName', v('firstName').length > 0);
+  mark('lastName', v('lastName').length > 0);
+  mark('email', /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v('email')));
+  mark('phone', v('phone').length > 0);
+  mark('country', v('country').length > 0);
+  mark('languages', v('languages').length > 0);
+  var li = v('linkedin');
+  mark('linkedin', /^https:\/\/(www\.)?linkedin\.com/.test(li));
+  // CV file validation
+  var cvField = document.querySelector('.field[data-name="cvFile"]');
+  var cvErrEl = document.getElementById('cv-err');
+  if (!selectedCvFile) {
+    cvField.classList.add('invalid');
+    cvErrEl.style.display = 'block';
+    ok = false;
+  } else {
+    cvField.classList.remove('invalid');
+    cvErrEl.style.display = 'none';
+  }
+
+  CONFIG.questions.forEach(function (q, idx) {
+    if (q.required === false) return;
+    var field = document.querySelector('.field[data-qindex="' + idx + '"]');
+    var answered = answers[idx] != null && String(answers[idx]).trim().length > 0;
+    field.classList.toggle('invalid', !answered);
+    if (!answered) ok = false;
+  });
+
+  if (!ok) {
+    var firstInvalid = document.querySelector('.field.invalid');
+    if (firstInvalid) firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+  return ok;
+}
+
+// ---- Submission ----
+function buildScreeningAnswersText() {
+  return CONFIG.questions.map(function (q, idx) {
+    var a = answers[idx] || '';
+    if (q.type === 'yesno' && a === 'Yes' && answers[idx + '_detail']) {
+      a += ' — ' + answers[idx + '_detail'];
+    }
+    return q.question + '\n' + a;
+  }).join('\n\n');
+}
+
+function todayDDMMYYYY() {
+  var d = new Date();
+  var dd = ('0' + d.getDate()).slice(-2);
+  var mm = ('0' + (d.getMonth() + 1)).slice(-2);
+  return dd + '/' + mm + '/' + d.getFullYear();
+}
+
+function buildRow(cvUrl) {
+  var v = function (id) { return document.getElementById(id).value.trim(); };
+  var fullName = v('firstName') + ' ' + v('lastName');
+  var linkedinUrl = v('linkedin');
+  // Make the profile cell a clickable hyperlink to their LinkedIn in the sheet
+  var profileCell = linkedinUrl
+    ? '=HYPERLINK("' + linkedinUrl.replace(/"/g, '') + '","' + fullName.replace(/"/g, '') + '")'
+    : fullName;
+  return [
+    profileCell,
+    'New',
+    '', '', '', '', '', '',
+    v('country'),
+    todayDDMMYYYY(),
+    v('languages'),
+    v('email'),
+    v('phone'),
+    linkedinUrl,
+    cvUrl || '',
+    '', '',
+    buildScreeningAnswersText()
+  ];
+}
+
+function uploadCvToAppsScript(file) {
+  return new Promise(function(resolve, reject) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      var base64 = e.target.result.split(',')[1];
+      fetch(CONFIG.appsScriptUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({
+          action: 'uploadCV',
+          roleTitle: CONFIG.roleTitle,
+          filename: file.name,
+          mimeType: file.type || 'application/octet-stream',
+          base64: base64
+        })
+      })
+      .then(function(res) { return res.json(); })
+      .then(function(data) {
+        if (data && data.url) resolve(data.url);
+        else resolve('');
+      })
+      .catch(function() { resolve(''); });
+    };
+    reader.onerror = function() { resolve(''); };
+    reader.readAsDataURL(file);
+  });
+}
+
+function submitToSheet(row) {
+  // Preferred path: Apps Script Web App (always has write permission).
+  if (CONFIG.appsScriptUrl && CONFIG.appsScriptUrl.indexOf('https://') === 0) {
+    return fetch(CONFIG.appsScriptUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify({ action: 'appendRow', tabName: CONFIG.sheetTab, values: row })
+    }).then(function (res) {
+      if (!res.ok) throw new Error('Submission failed (' + res.status + ')');
+      return res.json();
+    }).then(function (data) {
+      if (data && data.error) throw new Error(data.error);
+    });
+  }
+  // Direct Google Sheets API append with API key.
+  var url = 'https://sheets.googleapis.com/v4/spreadsheets/' + CONFIG.sheetId +
+    '/values/' + encodeURIComponent(CONFIG.sheetTab + '!A1') +
+    ':append?valueInputOption=USER_ENTERED&key=' + encodeURIComponent(CONFIG.sheetsApiKey);
+  return fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ values: [row] })
+  }).then(function (res) {
+    if (!res.ok) {
+      return res.text().then(function (t) {
+        throw new Error('Submission failed (' + res.status + '). ' + t.slice(0, 200));
+      });
+    }
+  });
+}
+
+document.getElementById('apply-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var errBox = document.getElementById('form-error');
+  errBox.style.display = 'none';
+  if (!validate()) return;
+
+  var btn = document.getElementById('submit-btn');
+  btn.disabled = true;
+  btn.classList.remove('pulse');
+  btn.innerHTML = '<span class="spinner"></span> Submitting your application';
+
+  var email = document.getElementById('email').value.trim();
+  var doSubmit = function(cvUrl) {
+    submitToSheet(buildRow(cvUrl))
+      .then(function () { showConfirmation(email); })
+      .catch(function (err) {
+        btn.disabled = false;
+        btn.textContent = 'Apply Now';
+        errBox.textContent = 'Something went wrong while submitting your application. Please try again. (' + err.message + ')';
+        errBox.style.display = 'block';
+      });
+  };
+
+  // Upload CV to Drive first if Apps Script is configured, then submit row
+  if (selectedCvFile && CONFIG.appsScriptUrl && CONFIG.appsScriptUrl.indexOf('https://') === 0) {
+    btn.innerHTML = '<span class="spinner"></span> Uploading CV…';
+    uploadCvToAppsScript(selectedCvFile).then(function(cvUrl) {
+      btn.innerHTML = '<span class="spinner"></span> Submitting your application';
+      doSubmit(cvUrl);
+    });
+  } else {
+    doSubmit('');
+  }
+
+});
+
+function showConfirmation(email) {
+  var formContent = document.getElementById('form-content');
+  var confirmation = document.getElementById('confirmation');
+  document.getElementById('conf-text').textContent =
+    'Thank you for applying for the ' + CONFIG.roleTitle + ' position. Our recruitment team will carefully review your application and reach out to you directly if your profile is a strong match. We appreciate the time you took to apply and will be in touch soon.';
+  document.getElementById('conf-date').textContent =
+    'Application submitted on ' + new Date().toLocaleString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+  document.getElementById('conf-note').textContent = 'A confirmation has been sent to ' + email + '.';
+
+  function swap() {
+    formContent.style.display = 'none';
+    confirmation.style.display = 'block';
+    if (typeof gsap !== 'undefined') {
+      gsap.fromTo(confirmation, { opacity: 0 }, { opacity: 1, duration: 0.4 });
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  if (typeof gsap !== 'undefined') {
+    gsap.to(formContent, { opacity: 0, duration: 0.3, onComplete: swap });
+  } else {
+    swap();
+  }
+}
+</script>
+</body>
+</html>
