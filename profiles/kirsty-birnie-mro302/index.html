@@ -75,9 +75,15 @@
   .footer-notice { text-align: center; padding: 10px 48px 16px; font-size: 9px; color: #cbd5e1; line-height: 1.5; }
 
   @media print {
-    body { background: #fff; }
-    .page { box-shadow: none; min-height: auto; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
+    body { background: #fff; margin: 0; }
+    .page { box-shadow: none; min-height: auto; border-radius: 0; margin: 0; }
+    .logo-banner { padding: 24px 40px; }
+    .content { padding: 30px 40px 32px; }
+    .footer-wrap { padding: 16px 40px; }
     .footer-notice { display: none; }
+    .exp-entry { break-inside: avoid; }
+    .section { break-inside: avoid; }
   }
   @media screen {
     .page { box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 8px 30px rgba(0,0,0,0.04); border-radius: 8px; margin: 24px auto; }
@@ -94,8 +100,8 @@
   <!-- Candidate Header -->
   <div class="candidate-header">
     <h1>Kirsty Birnie</h1>
-    <p class="subtitle">Candidate for <strong>Freelance Executive Assistant – Proactive &amp; Senior-Level Support | Multi-Ventures (Remote)</strong></p>
-    <div class="info-row"><span class="info-chip"><span class="ic-label">Location</span> Essex, United Kingdom (GMT/BST)</span><span class="info-chip"><span class="ic-label">Availability</span> Available for immediate start; dedicated capacity of 30–35 hours per month on a fully remote basis.</span><span class="info-chip"><span class="ic-label">Languages</span> English</span></div>
+    <p class="subtitle">Senior Executive Assistant &amp; Operational Specialist</p>
+    <div class="info-row"><span class="info-chip"><span class="ic-label">Location</span> Essex, United Kingdom (GMT/BST)</span><span class="info-chip"><span class="ic-label">Availability</span> 30-35 hours per month; Remote (UK-based)</span><span class="info-chip"><span class="ic-label">Languages</span> English (Native)</span></div>
   </div>
 
   <div class="divider"></div>
@@ -103,19 +109,19 @@
   
   <div class="section">
     <div class="section-title">Professional Summary</div>
-    <p class="summary">With over 20 years of experience supporting CEOs, founders, and senior leaders across corporate, legal, consultancy, and digital sectors, Kirsty Birnie is an exceptionally proactive and autonomous Senior Executive Assistant. She specializes in bringing calm, structured order to fast-paced environments, serving as a trusted gatekeeper and operational engine for multi-venture businesses. Kirsty excels at complex calendar optimization, structured inbox triage, and eliminating operational bottlenecks before they impact momentum. Her high attention to detail, proactive mindset, and ability to manage competing priorities without constant brief make her an ideal fit for this remote multi-venture role.</p>
+    <p class="summary">Kirsty is a senior-level Executive Assistant with over 20 years of experience supporting CEOs, founders, and senior leaders across corporate, consultancy, legal, and digital environments. Highly proactive and autonomous, she excels at managing complex multi-entity calendars, implementing structured inbox triage, and eliminating operational bottlenecks. Kirsty brings a calm, confident, and firm approach to executive support, ensuring leaders remain focused on high-impact strategic priorities.</p>
   </div>
 
   
   <div class="section">
     <div class="section-title">Key Highlights</div>
-    <ul class="highlights"><li>Over 20 years of experience delivering high-level EA and operational support to CEOs, founders, and senior executives across fast-moving environments.</li><li>Proactively eliminated executive burnout by auditing a CEO's calendar and rebuilding weekly schedules with protected focus blocks and buffer times, resulting in improved decision-making and business performance.</li><li>Utilizes a sophisticated four-tier inbox triage strategy (Exec Action, EA Action, Delegation, Archive) ensuring leaders only focus on high-priority strategic matters.</li><li>Adept at managing competing priorities across multiple business entities by evaluating daily tasks against high-level business goals rather than reacting to urgency or loud voices.</li><li>Tech-savvy operational partner who rapidly picks up new systems within days, with deep expertise in Google Workspace, Outlook, Asana, ClickUp, Slack, Teams, and Calendly.</li><li>Fully registered UK freelancer holding professional indemnity insurance and ICO registration, with immediate availability for 30–35 hours per month.</li></ul>
+    <ul class="highlights"><li>Brings over 20 years of high-level EA experience supporting C-suite executives and serial entrepreneurs across complex, fast-moving sectors.</li><li>Proactively identified executive burnout and operational delays by auditing a CEO's back-to-back calendar, restructuring her week with protected focus blocks and buffer times to improve leadership decision-making.</li><li>Utilizes a structured 4-tier inbox management framework (Exec Action, EA Action, Delegation, Filtering) to keep executive inboxes streamlined and clutter-free.</li><li>Applies a rigorous prioritization method based on business impact, revenue, and relationship management, refusing to let 'loud voices' redirect focus from core goals.</li><li>Highly adaptable technical stack proficiency, including Google Workspace, Outlook, Asana, ClickUp, Slack, Teams, Calendly, and 1Password/LastPass.</li><li>Fully registered UK freelancer holding Professional Indemnity Insurance and ICO registration, offering dedicated and reliable capacity.</li></ul>
   </div>
 
   
   <div class="section">
     <div class="section-title">Core Skills &amp; Expertise</div>
-    <div class="skills"><span class="skill">Executive Calendar Management</span><span class="skill">Inbox Triage &amp; Management</span><span class="skill">Multi-Venture Prioritization</span><span class="skill">Stakeholder Management</span><span class="skill">Process Optimization &amp; SOP Creation</span><span class="skill">Google Workspace</span><span class="skill">Microsoft Outlook</span><span class="skill">Asana</span><span class="skill">ClickUp</span><span class="skill">Slack &amp; MS Teams</span><span class="skill">Calendly</span><span class="skill">1Password &amp; LastPass</span><span class="skill">Project &amp; Event Coordination</span></div>
+    <div class="skills"><span class="skill">Complex Calendar Management</span><span class="skill">Multi-Tier Inbox Triage</span><span class="skill">Multi-Venture Prioritisation</span><span class="skill">Process Optimization &amp; SOP Creation</span><span class="skill">Executive Gatekeeping</span><span class="skill">Google Workspace &amp; Microsoft Outlook</span><span class="skill">Asana &amp; ClickUp</span><span class="skill">Slack &amp; Microsoft Teams</span><span class="skill">Calendly Scheduling Workflows</span><span class="skill">1Password &amp; LastPass Security</span><span class="skill">Project &amp; Event Coordination</span><span class="skill">Stakeholder Management</span></div>
   </div>
 
   
@@ -123,11 +129,18 @@
     <div class="section-title">Professional Experience</div>
     <div class="exp-entry">
       <div class="exp-header">
-        <span class="exp-role">Founder &amp; Senior Executive Assistant / Virtual Assistant</span>
+        <span class="exp-role">Founder &amp; Lead Executive Assistant</span>
         <span class="exp-period">Present</span>
       </div>
       <div class="exp-company">Kite &amp; Compass</div>
-      <div class="exp-desc">Provides senior-level executive, operational, and administrative support to founders, CEOs, consultants, and business owners across consultancy, education, legal, healthcare, and finance sectors. Reclaims valuable time for leaders through structured inbox and diary management, client engagement, project coordination, and SOP development. Delivers proactive, autonomous support across multi-venture setups to streamline day-to-day operations and improve business efficiency.</div>
+      <div class="exp-desc">Provides dedicated executive support, operational structure, and virtual assistant services to entrepreneurs, consultants, and business leaders. Specializes in restoring calm and efficiency through calendar overhaul, proactive email management, SOP creation, and workflow automation.</div>
+    </div><div class="exp-entry">
+      <div class="exp-header">
+        <span class="exp-role">Senior Executive Assistant / Virtual Assistant</span>
+        <span class="exp-period">20+ Years Experience</span>
+      </div>
+      <div class="exp-company">Various Clients (Consultancy, Corporate, Legal, Healthcare &amp; Finance)</div>
+      <div class="exp-desc">Delivered comprehensive executive and operational support across diverse fast-paced sectors. Managed multi-stakeholder scheduling, recruitment administration, compliant financial processing (POs and invoicing), and event coordination for C-suite leaders and senior partners.</div>
     </div>
   </div>
 
