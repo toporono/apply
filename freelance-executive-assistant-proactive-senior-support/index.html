@@ -1043,15 +1043,15 @@ function buildRow(cvUrl) {
   var profileCell = linkedinUrl
     ? '=HYPERLINK("' + linkedinUrl.replace(/"/g, '') + '","' + fullName.replace(/"/g, '') + '")'
     : fullName;
-  // Column layout v2:
+  // Column layout v3:
   // A Profile, B Status, C Internal Notes, D Team Notes, E Rate, F Score,
-  // G Score Reason, H Recommendation, I Highlights, J Potential Weaknesses,
-  // K Portfolio, L Location, M Registered, N Applied, O Languages, P Email,
-  // Q Phone, R LinkedIn, S CV Link, T Screening Answers (hidden)
+  // G Recommendation, H Highlights, I Potential Weaknesses,
+  // J Portfolio, K Location, L Registered, M Applied, N Languages, O Email,
+  // P Phone, Q LinkedIn, R CV Link, S Screening Answers (hidden)
   return [
     profileCell,
     'New',
-    '', '', '', '', '', '', '', '',
+    '', '', '', '', '', '', '',
     portfolioAnswer(),
     v('country'),
     registeredAnswer(),
