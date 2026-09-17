@@ -1,0 +1,235 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Elisabeth Brock — Candidate Profile | Appoint Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  @page { margin: 20mm 16mm 18mm 16mm; size: A4; }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', 'Segoe UI', -apple-system, sans-serif; color: #1e293b; background: #f8fafc; line-height: 1.6; font-size: 13px; -webkit-font-smoothing: antialiased; }
+  .page { max-width: 800px; margin: 0 auto; background: #fff; min-height: 100vh; }
+
+  /* ── Logo banner ── */
+  .logo-banner { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); padding: 28px 48px; display: flex; align-items: center; justify-content: center; }
+  .logo-banner img { max-height: 72px; max-width: 280px; object-fit: contain; filter: brightness(0) invert(1); }
+  .logo-banner-light img { filter: none; }
+  .logo-banner .logo-fallback { font-size: 24px; font-weight: 800; color: #fff; letter-spacing: 0.02em; text-transform: uppercase; }
+
+  .content { padding: 36px 48px 40px; }
+
+  /* ── Candidate header ── */
+  .candidate-header { margin-bottom: 28px; }
+  .candidate-header h1 { font-size: 32px; font-weight: 800; color: #0f172a; letter-spacing: -0.03em; line-height: 1.2; margin-bottom: 4px; }
+  .candidate-header .subtitle { font-size: 15px; color: #64748b; font-weight: 500; }
+  .candidate-header .subtitle strong { color: #3b82f6; font-weight: 600; }
+
+  /* ── Info chips ── */
+  .info-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .info-chip { display: inline-flex; align-items: center; gap: 5px; background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 6px; padding: 5px 12px; font-size: 11.5px; color: #475569; font-weight: 500; }
+  .info-chip .ic-label { color: #94a3b8; font-weight: 600; text-transform: uppercase; font-size: 9px; letter-spacing: 0.05em; }
+
+  /* ── Divider ── */
+  .divider { height: 2px; background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899); border-radius: 2px; margin: 0 0 32px; }
+
+  /* ── Sections ── */
+  .section { margin-bottom: 26px; }
+  .section-title { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: #3b82f6; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+  .section-title::after { content: ''; flex: 1; height: 1px; background: #e2e8f0; }
+
+  /* ── Summary ── */
+  .summary { font-size: 14px; color: #334155; line-height: 1.8; font-weight: 400; }
+
+  /* ── Highlights ── */
+  .highlights { list-style: none; padding: 0; display: grid; gap: 6px; }
+  .highlights li { font-size: 13px; color: #334155; padding: 8px 14px 8px 36px; position: relative; line-height: 1.6; background: #f8fafc; border-radius: 6px; border-left: 3px solid #3b82f6; }
+  .highlights li::before { content: '\2713'; position: absolute; left: 12px; top: 8px; color: #3b82f6; font-weight: 700; font-size: 12px; }
+
+  /* ── Skills ── */
+  .skills { display: flex; flex-wrap: wrap; gap: 7px; }
+  .skill { display: inline-block; background: linear-gradient(135deg, #eff6ff, #f0f4ff); color: #1d4ed8; font-size: 11px; font-weight: 600; padding: 5px 14px; border-radius: 20px; border: 1px solid #bfdbfe; }
+
+  /* ── Experience ── */
+  .exp-entry { margin-bottom: 20px; padding-left: 20px; border-left: 2px solid #e2e8f0; position: relative; page-break-inside: avoid; }
+  .exp-entry::before { content: ''; position: absolute; left: -5px; top: 4px; width: 8px; height: 8px; background: #3b82f6; border-radius: 50%; }
+  .exp-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 2px; }
+  .exp-role { font-size: 14.5px; font-weight: 700; color: #0f172a; }
+  .exp-period { font-size: 11px; color: #94a3b8; font-weight: 500; white-space: nowrap; background: #f1f5f9; padding: 2px 8px; border-radius: 4px; }
+  .exp-company { font-size: 12.5px; color: #3b82f6; font-weight: 600; margin-bottom: 5px; }
+  .exp-desc { font-size: 12.5px; color: #475569; line-height: 1.7; }
+
+  /* ── Education ── */
+  .education { font-size: 13px; color: #334155; line-height: 1.7; padding: 12px 16px; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; }
+
+  /* ── Details grid ── */
+  .details { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 32px; }
+  .detail-item { padding: 8px 0; }
+  .detail-item .dl { font-size: 9px; text-transform: uppercase; letter-spacing: 0.1em; color: #94a3b8; font-weight: 700; margin-bottom: 3px; }
+  .detail-item .dv { font-size: 13px; color: #1e293b; font-weight: 500; }
+
+  /* ── Footer ── */
+  .footer-wrap { background: #f8fafc; border-top: 1px solid #e2e8f0; padding: 20px 48px; }
+  .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .footer-left { }
+  .footer-brand { font-size: 13px; color: #0f172a; font-weight: 700; margin-bottom: 2px; }
+  .footer-sub { font-size: 10px; color: #94a3b8; font-weight: 400; }
+  .footer-logo { max-height: 36px; max-width: 130px; object-fit: contain; }
+  .footer-notice { text-align: center; padding: 10px 48px 16px; font-size: 9px; color: #cbd5e1; line-height: 1.5; }
+
+  /* ── Client feedback (screen only) ── */
+  .feedback { margin: 8px 48px 28px; padding: 22px 24px; border: 1px solid #e2e8f0; border-radius: 10px; background: #f8fafc; }
+  .fb-title { font-size: 14px; font-weight: 700; color: #0f172a; margin-bottom: 3px; }
+  .fb-sub { font-size: 12px; color: #64748b; margin-bottom: 14px; }
+  .fb-btns { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+  .fb-btn { font-family: inherit; font-size: 13px; font-weight: 600; padding: 9px 18px; border-radius: 8px; border: 1px solid #cbd5e1; background: #fff; color: #1e293b; cursor: pointer; transition: all .15s; }
+  .fb-btn:hover { border-color: #94a3b8; transform: translateY(-1px); }
+  .fb-btn:disabled { opacity: .55; cursor: default; transform: none; }
+  .fb-yes:hover { border-color: #177245; color: #177245; background: #e3f1e8; }
+  .fb-maybe:hover { border-color: #8a5a00; color: #8a5a00; background: #fbefd8; }
+  .fb-no:hover { border-color: #b3261e; color: #b3261e; background: #fae6e4; }
+  .fb-note { width: 100%; font-family: inherit; font-size: 12.5px; padding: 9px 12px; border: 1px solid #e2e8f0; border-radius: 7px; resize: vertical; min-height: 56px; color: #1e293b; background: #fff; }
+  .fb-status { font-size: 12px; color: #3b82f6; margin-top: 8px; min-height: 16px; font-weight: 500; }
+  .fb-done .fb-btns, .fb-done .fb-note { display: none; }
+
+  @media print {
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
+    .feedback { display: none; }
+    body { background: #fff; margin: 0; }
+    .page { box-shadow: none; min-height: auto; border-radius: 0; margin: 0; }
+    .logo-banner { padding: 24px 40px; }
+    .content { padding: 30px 40px 32px; }
+    .footer-wrap { padding: 16px 40px; }
+    .footer-notice { display: none; }
+    .exp-entry { break-inside: avoid; }
+    .section { break-inside: avoid; }
+  }
+  @media screen {
+    .page { box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 8px 30px rgba(0,0,0,0.04); border-radius: 8px; margin: 24px auto; }
+  }
+</style></head><body>
+<div class="page">
+
+<!-- Logo Banner -->
+<div class="logo-banner">
+  <span class="logo-fallback">Appoint Group</span>
+</div>
+
+<div class="content">
+  <!-- Candidate Header -->
+  <div class="candidate-header">
+    <h1>Elisabeth Brock</h1>
+    <p class="subtitle">Swiss Healthcare Reimbursement &amp; Health Economics Specialist</p>
+    <div class="info-row"><span class="info-chip"><span class="ic-label">Location</span> Basel, Switzerland (CET)</span><span class="info-chip"><span class="ic-label">Availability</span> Available for immediate start, remote arrangement from Switzerland or CET, fully available for the requested 10-15 hour Phase 1 engagement.</span><span class="info-chip"><span class="ic-label">Languages</span> Schweizerdeutsch (Swiss German) (Native), German (Native), English (Advanced), French (C1), Italian (C1)</span></div>
+  </div>
+
+  <div class="divider"></div>
+
+  
+  <div class="section">
+    <div class="section-title">Professional Summary</div>
+    <p class="summary">Elisabeth is a seasoned health economist with over 20 years of specialized expertise in Swiss market access, HTA, and reimbursement strategies under KVG/OKP, TARDOC, MiGeL, and KLV. As the founder of Elibo Health, she delivers pragmatic, hands-on technical coding and tariff navigation for drugs, medical devices, and digital health solutions. During her interview, Elisabeth demonstrated deep current knowledge of the upcoming 2025/2026 TARDOC and ambulatory flat fee implementations, making her the ideal expert for this focused tariff deep dive.</p>
+  </div>
+
+  
+  <div class="section">
+    <div class="section-title">Key Highlights</div>
+    <ul class="highlights"><li>Brings 20+ years of comprehensive strategic and operational experience in Swiss healthcare reimbursement, HTA, and HEOR for drugs, medical devices, diagnostics, and medical services.</li><li>Demonstrated hands-on command of complex Swiss coding structures during the interview, explicitly detailing methodology for TARDOC, Fallpauschalen, MiGeL, KLV, and Spezialitätenliste (SL).</li><li>Expert in pragmatic short-, medium-, and long-term market access strategies, including code stacking and utilizing individual patient reimbursement requests (Einzelfallvergütung) as an interim revenue bridge.</li><li>Recently provided strategic outpatient sector guidance for a cardiovascular monitoring device, adapting global budget impact models with Swiss input data under the new TARDOC and ambulatory flat fee reimbursement framework.</li><li>Extensive tier-one consulting background including leadership roles at IQVIA and HealthEcon AG, managing complex multi-country proposals and Swiss reimbursement dossiers.</li><li>Direct and execution-focused work ethic, preferring hands-on technical analysis and direct client collaboration over heavy internal management layers.</li></ul>
+  </div>
+
+  
+  <div class="section">
+    <div class="section-title">Core Skills &amp; Expertise</div>
+    <div class="skills"><span class="skill">Swiss Healthcare Reimbursement (OKP/KVG)</span><span class="skill">Tariff &amp; Coding (TARDOC, MiGeL, KLV, SL, Fallpauschalen)</span><span class="skill">Health Economics &amp; Outcomes Research (HEOR)</span><span class="skill">Health Technology Assessment (HTA)</span><span class="skill">Market Access Strategy</span><span class="skill">Digital Health &amp; Medtech Reimbursement</span><span class="skill">Budget Impact Modeling</span><span class="skill">Value Proposition Development</span><span class="skill">Payer Evidence &amp; Dossier Writing</span><span class="skill">Stakeholder &amp; Payer Engagement</span></div>
+  </div>
+
+  
+  <div class="section">
+    <div class="section-title">Professional Experience</div>
+    <div class="exp-entry">
+      <div class="exp-header">
+        <span class="exp-role">Owner &amp; Managing Director</span>
+        <span class="exp-period">Jan 2024 – Present</span>
+      </div>
+      <div class="exp-company">Elibo Health Ltd.</div>
+      <div class="exp-desc">Provides specialized freelance market access, HTA, and HEOR support for medical technologies in Switzerland. Delivers strategic dossier structuring, price negotiations, value message development, data gap analysis, and hands-on operational reimbursement writing and economic modeling.</div>
+    </div><div class="exp-entry">
+      <div class="exp-header">
+        <span class="exp-role">Principal, Value &amp; Payer Evidence, Strategy/ Life Sciences Consulting Department</span>
+        <span class="exp-period">Jan 2022 – Dec 2023</span>
+      </div>
+      <div class="exp-company">IQVIA (EMEA)</div>
+      <div class="exp-desc">Led cross-functional global proposals and project delivery involving specialist teams and complex market access, HTA, and HEOR requirements. Acted as a subject matter expert for EU JCA and JSC initiatives.</div>
+    </div><div class="exp-entry">
+      <div class="exp-header">
+        <span class="exp-role">Senior Consultant Market Access Switzerland / Health Economics Europe</span>
+        <span class="exp-period">Jan 2020 – Dec 2022</span>
+      </div>
+      <div class="exp-company">HealthEcon AG</div>
+      <div class="exp-desc">Spearheaded business development, proposal conceptualization, and project delivery for Swiss reimbursement dossiers, price negotiations, and related market access and HEOR engagements.</div>
+    </div><div class="exp-entry">
+      <div class="exp-header">
+        <span class="exp-role">Various Consultant Roles</span>
+        <span class="exp-period">Jan 2004 – Dec 2020</span>
+      </div>
+      <div class="exp-company">HealthEcon AG</div>
+      <div class="exp-desc">Managed HTA, HEOR, and Market Access projects across inpatient and outpatient sectors. Covered general reimbursement pathways for the FOPH/BAG, BSV, TPG, and sickness funds in Switzerland, alongside international frameworks including G-BA and IQWiG (Germany), NICE (UK), and TLV (Sweden).</div>
+    </div>
+  </div>
+
+  
+  <div class="section">
+    <div class="section-title">Education &amp; Certifications</div>
+    <div class="education">PhD in Health Economics, University of St Andrews, UK; MA (Jt. Hons.) in Economics and Management, University of St Andrews, UK; Professional Diploma in Coaching and Mentoring, Kingstown College, Ireland</div>
+  </div>
+</div>
+
+<!-- Client feedback — posts to the Apps Script; hidden when printing -->
+<div class="feedback" id="fb">
+  <div class="fb-title">Your verdict on Elisabeth Brock</div>
+  <div class="fb-sub">One click. It reaches your recruiter immediately and stays private.</div>
+  <div class="fb-btns">
+    <button type="button" class="fb-btn fb-yes" data-v="interested">Interested</button>
+    <button type="button" class="fb-btn fb-maybe" data-v="maybe">Maybe</button>
+    <button type="button" class="fb-btn fb-no" data-v="pass">Pass</button>
+  </div>
+  <textarea class="fb-note" id="fb-note" placeholder="Optional — what stood out, or what is missing?"></textarea>
+  <div class="fb-status" id="fb-status"></div>
+</div>
+<script>
+(function () {
+  var url = "https://script.google.com/macros/s/AKfycbwdqzv0_wn58zEJmYd_H7si5B0jBzFKFKQs_ttyDjs5BmTTzIqGISq9rtqjZiuv1u3ysg/exec";
+  var meta = {"candidateId":"mu4bsi1i-jrb07yp","sheetRowIndex":5,"roleSlug":"freelance-swiss-healthcare-reimbursement-specialist-digital-health","roleTitle":"Freelance Swiss Healthcare Reimbursement Specialist – Tariff \u0026 Coding (OKP/KVG) | Digital Health (Remote / Switzerland)","candidateName":"Elisabeth Brock","client":"Appoint Group"};
+  var box = document.getElementById('fb');
+  if (!box) return;
+  if (!url) { box.style.display = 'none'; return; }
+  var status = document.getElementById('fb-status');
+  var btns = box.querySelectorAll('.fb-btn');
+  function setDisabled(on) { for (var j = 0; j < btns.length; j++) btns[j].disabled = on; }
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener('click', function () {
+      var verdict = this.getAttribute('data-v');
+      setDisabled(true);
+      status.textContent = 'Sending…';
+      var payload = { action: 'profileFeedback', verdict: verdict, comment: (document.getElementById('fb-note').value || '').slice(0, 1000), at: new Date().toISOString() };
+      for (var k in meta) payload[k] = meta[k];
+      fetch(url, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(payload) })
+        .then(function (r) { return r.text(); })
+        .then(function () { status.textContent = 'Thank you — your verdict has been recorded.'; box.className += ' fb-done'; })
+        .catch(function () { status.textContent = 'Could not send. Please try again or reply by email.'; setDisabled(false); });
+    });
+  }
+})();
+</script>
+
+<!-- Footer -->
+<div class="footer-wrap">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <div class="footer-brand">Prepared by Appoint Group</div>
+      <div class="footer-sub">17 September 2026 &middot; Confidential</div>
+    </div>
+    
+  </div>
+</div>
+<div class="footer-notice">This document is confidential and intended solely for the recipient. Please do not redistribute without prior consent.<br/>Candidate personal data is processed in accordance with applicable data protection regulations (GDPR).</div>
+
+</div>
+</body></html>
