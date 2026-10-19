@@ -1,0 +1,277 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Deniz Tunbeceren — Candidate Profile | Appoint Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  @page { margin: 20mm 16mm 18mm 16mm; size: A4; }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', 'Segoe UI', -apple-system, sans-serif; color: #1e293b; background: #f8fafc; line-height: 1.6; font-size: 13px; -webkit-font-smoothing: antialiased; }
+  .page { max-width: 800px; margin: 0 auto; background: #fff; min-height: 100vh; }
+
+  /* ── Logo banner ── */
+  .logo-banner { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); padding: 28px 48px; display: flex; align-items: center; justify-content: center; }
+  .logo-banner img { max-height: 72px; max-width: 280px; object-fit: contain; filter: brightness(0) invert(1); }
+  .logo-banner-light img { filter: none; }
+  .logo-banner .logo-fallback { font-size: 24px; font-weight: 800; color: #fff; letter-spacing: 0.02em; text-transform: uppercase; }
+
+  .content { padding: 36px 48px 40px; }
+
+  /* ── Candidate header ── */
+  .candidate-header { margin-bottom: 28px; }
+  .candidate-header h1 { font-size: 32px; font-weight: 800; color: #0f172a; letter-spacing: -0.03em; line-height: 1.2; margin-bottom: 4px; }
+  .candidate-header .subtitle { font-size: 15px; color: #64748b; font-weight: 500; }
+  .candidate-header .subtitle strong { color: #3b82f6; font-weight: 600; }
+
+  /* ── Info chips ── */
+  .info-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .info-chip { display: inline-flex; align-items: center; gap: 5px; background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 6px; padding: 5px 12px; font-size: 11.5px; color: #475569; font-weight: 500; }
+  .info-chip .ic-label { color: #94a3b8; font-weight: 600; text-transform: uppercase; font-size: 9px; letter-spacing: 0.05em; }
+
+  /* ── Divider ── */
+  .divider { height: 2px; background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899); border-radius: 2px; margin: 0 0 32px; }
+
+  /* ── Sections ── */
+  .section { margin-bottom: 26px; }
+  .section-title { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: #3b82f6; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+  .section-title::after { content: ''; flex: 1; height: 1px; background: #e2e8f0; }
+
+  /* ── Summary ── */
+  .summary { font-size: 14px; color: #334155; line-height: 1.8; font-weight: 400; }
+
+  /* ── Highlights ── */
+  .highlights { list-style: none; padding: 0; display: grid; gap: 6px; }
+  .highlights li { font-size: 13px; color: #334155; padding: 8px 14px 8px 36px; position: relative; line-height: 1.6; background: #f8fafc; border-radius: 6px; border-left: 3px solid #3b82f6; }
+  .highlights li::before { content: '\2713'; position: absolute; left: 12px; top: 8px; color: #3b82f6; font-weight: 700; font-size: 12px; }
+
+  /* ── Skills ── */
+  .skills { display: flex; flex-wrap: wrap; gap: 7px; }
+  .skill { display: inline-block; background: linear-gradient(135deg, #eff6ff, #f0f4ff); color: #1d4ed8; font-size: 11px; font-weight: 600; padding: 5px 14px; border-radius: 20px; border: 1px solid #bfdbfe; }
+
+  /* ── Experience ── */
+  .exp-entry { margin-bottom: 20px; padding-left: 20px; border-left: 2px solid #e2e8f0; position: relative; page-break-inside: avoid; }
+  .exp-entry::before { content: ''; position: absolute; left: -5px; top: 4px; width: 8px; height: 8px; background: #3b82f6; border-radius: 50%; }
+  .exp-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 2px; }
+  .exp-role { font-size: 14.5px; font-weight: 700; color: #0f172a; }
+  .exp-period { font-size: 11px; color: #94a3b8; font-weight: 500; white-space: nowrap; background: #f1f5f9; padding: 2px 8px; border-radius: 4px; }
+  .exp-company { font-size: 12.5px; color: #3b82f6; font-weight: 600; margin-bottom: 5px; }
+  .exp-desc { font-size: 12.5px; color: #475569; line-height: 1.7; }
+
+  /* ── Education ── */
+  .education { font-size: 13px; color: #334155; line-height: 1.7; padding: 12px 16px; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; }
+
+  /* ── Details grid ── */
+  .details { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 32px; }
+  .detail-item { padding: 8px 0; }
+  .detail-item .dl { font-size: 9px; text-transform: uppercase; letter-spacing: 0.1em; color: #94a3b8; font-weight: 700; margin-bottom: 3px; }
+  .detail-item .dv { font-size: 13px; color: #1e293b; font-weight: 500; }
+
+  /* ── Footer ── */
+  .footer-wrap { background: #f8fafc; border-top: 1px solid #e2e8f0; padding: 20px 48px; }
+  .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .footer-left { }
+  .footer-brand { font-size: 13px; color: #0f172a; font-weight: 700; margin-bottom: 2px; }
+  .footer-sub { font-size: 10px; color: #94a3b8; font-weight: 400; }
+  .footer-logo { max-height: 36px; max-width: 130px; object-fit: contain; }
+  .footer-notice { text-align: center; padding: 10px 48px 16px; font-size: 9px; color: #cbd5e1; line-height: 1.5; }
+
+  /* ── Client feedback (screen only) ── */
+  .feedback { margin: 8px 48px 28px; padding: 22px 24px; border: 1px solid #e2e8f0; border-radius: 10px; background: #f8fafc; }
+  .fb-title { font-size: 14px; font-weight: 700; color: #0f172a; margin-bottom: 3px; }
+  .fb-sub { font-size: 12px; color: #64748b; margin-bottom: 14px; }
+  .fb-btns { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+  .fb-btn { font-family: inherit; font-size: 13px; font-weight: 600; padding: 9px 18px; border-radius: 8px; border: 1px solid #cbd5e1; background: #fff; color: #1e293b; cursor: pointer; transition: all .15s; }
+  .fb-btn:hover { border-color: #94a3b8; transform: translateY(-1px); }
+  .fb-btn:disabled { opacity: .55; cursor: default; transform: none; }
+  .fb-yes:hover { border-color: #177245; color: #177245; background: #e3f1e8; }
+  .fb-maybe:hover { border-color: #8a5a00; color: #8a5a00; background: #fbefd8; }
+  .fb-no:hover { border-color: #b3261e; color: #b3261e; background: #fae6e4; }
+  .fb-note { width: 100%; font-family: inherit; font-size: 12.5px; padding: 9px 12px; border: 1px solid #e2e8f0; border-radius: 7px; resize: vertical; min-height: 56px; color: #1e293b; background: #fff; }
+  .fb-status { font-size: 12px; color: #3b82f6; margin-top: 8px; min-height: 16px; font-weight: 500; }
+  .fb-done .fb-btns, .fb-done .fb-note { display: none; }
+
+  @media print {
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
+    .feedback { display: none; }
+    body { background: #fff; margin: 0; }
+    .page { box-shadow: none; min-height: auto; border-radius: 0; margin: 0; }
+    .logo-banner { padding: 24px 40px; }
+    .content { padding: 30px 40px 32px; }
+    .footer-wrap { padding: 16px 40px; }
+    .footer-notice { display: none; }
+    .exp-entry { break-inside: avoid; }
+    .section { break-inside: avoid; }
+  }
+  @media screen {
+    .page { box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 8px 30px rgba(0,0,0,0.04); border-radius: 8px; margin: 24px auto; }
+  }
+</style></head><body>
+<div class="page">
+
+<!-- Logo Banner -->
+<div class="logo-banner">
+  <span class="logo-fallback">Appoint Group</span>
+</div>
+
+<div class="content">
+  <!-- Candidate Header -->
+  <div class="candidate-header">
+    <h1>Deniz Tunbeceren</h1>
+    <p class="subtitle">Senior Executive Assistant &amp; Private Banking Specialist</p>
+    <div class="info-row"><span class="info-chip"><span class="ic-label">Location</span> Zurich, Switzerland (CET / CEST)</span><span class="info-chip"><span class="ic-label">Availability</span> Available immediately for a full-time (100%), permanent, fully on-site role in Zurich</span><span class="info-chip"><span class="ic-label">Languages</span> German (Native / Mother tongue), Swiss German (Fluent / Native proficiency), English (Fluent), Turkish (Fluent)</span><span class="info-chip"><span class="ic-label">Email</span> deniz.tunbeceren@gmx.ch</span><span class="info-chip"><span class="ic-label">Phone</span> +41795722082</span></div>
+  </div>
+
+  <div class="divider"></div>
+
+  
+  <div class="section">
+    <div class="section-title">Professional Summary</div>
+    <p class="summary">Deniz brings over two decades of high-calibre executive support and client relationship experience within Zurich's premier private banking and financial institutions. Having served nearly 12 consecutive years as the sole Executive Assistant to the Group CFO and previously supporting the CEO and COO at Bank Julius Baer, she offers unmatched operational excellence, discretion, and sophisticated stakeholder management. Her background combines complex C-suite calendar orchestration and cross-border logistics with front-line private client management from BNP Paribas and Citibank. Deniz is ideally matched for this role, offering long-term dedication, native Swiss-German fluency, and a proven standard of white-glove service for high-net-worth individuals.</p>
+  </div>
+
+  
+  <div class="section">
+    <div class="section-title">Key Highlights</div>
+    <ul class="highlights"><li>Demonstrated exceptional stability and loyalty through nearly 12 consecutive years (2010–2022) serving as 100% Executive Assistant to the Chief Financial Officer at Julius Baer Group.</li><li>Proven track record supporting top C-suite leadership, including extensive tenure assisting the COO and CEO (Boris F. J. Collardi) as well as the Chief of Staff office in all high-level operational and administrative tasks.</li><li>Extensive private banking and client-facing pedigree, having held Relationship Manager and Account Manager positions at both BNP Paribas and Citibank.</li><li>Comprehensive operational mastery across complex international calendar coordination, cross-border multi-leg itineraries, high-level board mandate tracking, and department-wide office administration.</li><li>Deeply familiar with handling high-net-worth individuals and senior stakeholders with poise, proactive problem-solving, and strict confidentiality.</li><li>Zurich native with seamless multilingual capabilities in German, Swiss German, English, and Turkish, perfectly aligned with the firm's cross-European client base.</li></ul>
+  </div>
+
+  
+  <div class="section">
+    <div class="section-title">Core Skills &amp; Expertise</div>
+    <div class="skills"><span class="skill">C-Suite &amp; Executive Support</span><span class="skill">Complex Calendar &amp; Travel Management</span><span class="skill">Private Banking &amp; Wealth Management</span><span class="skill">HNW Client Relations &amp; Hospitality</span><span class="skill">Office Management &amp; Administration</span><span class="skill">Board of Directors Mandate Tracking</span><span class="skill">Event &amp; Meeting Coordination</span><span class="skill">Cross-Border Logistics</span><span class="skill">Microsoft Office Suite (Word, Excel, PowerPoint, Outlook)</span><span class="skill">Expense Management &amp; Reporting</span><span class="skill">Stakeholder Communications</span><span class="skill">Discretion &amp; Confidentiality</span></div>
+  </div>
+
+  
+  <div class="section">
+    <div class="section-title">Professional Experience</div>
+    <div class="exp-entry">
+      <div class="exp-header">
+        <span class="exp-role">Aviation Security</span>
+        <span class="exp-period">Mar 2025 – Present</span>
+      </div>
+      <div class="exp-company">Checkport AG, Zurich Airport</div>
+      <div class="exp-desc">Ensures rigorous compliance with aviation security standards and protocol execution in a fast-paced environment at Zurich Airport. Operates with acute attention to detail, strict procedural integrity, and high-stakes situational awareness.</div>
+    </div><div class="exp-entry">
+      <div class="exp-header">
+        <span class="exp-role">Virtual Assistant for Individuals, Companies &amp; Communities</span>
+        <span class="exp-period">Jul 2023 – Present</span>
+      </div>
+      <div class="exp-company">Sheorganizer (Self-Employed)</div>
+      <div class="exp-desc">Delivers bespoke administrative, organisational, and operational support to private clients, small businesses, and community initiatives on an entrepreneurial basis. Manages scheduling, client correspondence, and specialized administrative tasks.</div>
+    </div><div class="exp-entry">
+      <div class="exp-header">
+        <span class="exp-role">Business Support to Global Head Middle East &amp; Africa</span>
+        <span class="exp-period">May 2022 – Jun 2023</span>
+      </div>
+      <div class="exp-company">Bank Julius Baer, Zurich</div>
+      <div class="exp-desc">Delivered 100% business support to the Global Head of Middle East &amp; Africa, coordinating high-level regional management meetings, off-sites, town halls, and international conferences. Produced and refined complex presentations in PowerPoint and Excel while managing day-to-day administrative operations for the regional management team and front-office banking professionals.</div>
+    </div><div class="exp-entry">
+      <div class="exp-header">
+        <span class="exp-role">Executive Assistant to Chief Financial Officer</span>
+        <span class="exp-period">Aug 2010 – May 2022</span>
+      </div>
+      <div class="exp-company">Julius Baer Group, Zurich</div>
+      <div class="exp-desc">Served for nearly 12 years as the dedicated Executive Assistant to Group CFO Dieter Enkelmann, managing short- and medium-term executive calendars, multi-destination travel itineraries, logistics, and expense tracking. Acted as central liaison for internal and external counterparties, coordinated space moves, and prepared board-level PowerPoint presentations. Administered and tracked permits, departmental budgets, and internal/external Board of Director mandates while supporting strategic initiatives across Investor Relations, M&amp;A, and Corporate Development.</div>
+    </div><div class="exp-entry">
+      <div class="exp-header">
+        <span class="exp-role">Executive Assistant to Chief Operating Officer / Chief Executive Officer</span>
+        <span class="exp-period">Jan 2007 – Jul 2010</span>
+      </div>
+      <div class="exp-company">Bank Julius Baer, Zurich</div>
+      <div class="exp-desc">Partnered directly with the COO and subsequent CEO Boris F. J. Collardi, his direct reports, and the Chief of Staff team in executing comprehensive organizational and administrative operations. Managed complex executive agendas, communication triage, contact databases, and operational office supplies to maintain an efficient executive office.</div>
+    </div><div class="exp-entry">
+      <div class="exp-header">
+        <span class="exp-role">Relationship Manager for Turkish Clients</span>
+        <span class="exp-period">May 2005 – Mar 2006</span>
+      </div>
+      <div class="exp-company">BNP Paribas, Zurich</div>
+      <div class="exp-desc">Managed relationships with private banking clients, delivering dedicated advisory support and addressing client needs with a commitment to service excellence. Ensured high standards of client satisfaction, transaction execution, and relationship maintenance.</div>
+    </div><div class="exp-entry">
+      <div class="exp-header">
+        <span class="exp-role">Relationship Manager / Account Manager / EMEA Bahamas Coordinator</span>
+        <span class="exp-period">Mar 2001 – Apr 2005</span>
+      </div>
+      <div class="exp-company">Citibank, Zurich &amp; Geneva</div>
+      <div class="exp-desc">Handled diverse client-facing and middle-office responsibilities, including serving as Relationship Manager and Assistant for Turkish private clients. Acted as Account Manager supporting a pool of Relationship Managers in Singapore and fulfilled middle-office functions coordinating fund transfers and reporting between Switzerland and the Bahamas.</div>
+    </div><div class="exp-entry">
+      <div class="exp-header">
+        <span class="exp-role">Secretary</span>
+        <span class="exp-period">Jun 1999 – Mar 2001</span>
+      </div>
+      <div class="exp-company">Shark Fisher Ltd., Zurich</div>
+      <div class="exp-desc">Managed daily secretarial administration, correspondence, filing, and office coordination to ensure smooth daily commercial operations.</div>
+    </div><div class="exp-entry">
+      <div class="exp-header">
+        <span class="exp-role">Sales Assistant</span>
+        <span class="exp-period">Dec 1997 – Dec 1998</span>
+      </div>
+      <div class="exp-company">Da Soul, Zurich</div>
+      <div class="exp-desc">Delivered customer-facing sales service and support, managing point-of-sale activities, inventory control, and retail client interactions.</div>
+    </div><div class="exp-entry">
+      <div class="exp-header">
+        <span class="exp-role">Apprentice Sales Assistant</span>
+        <span class="exp-period">Aug 1995 – Aug 1997</span>
+      </div>
+      <div class="exp-company">Bijouterie Bourquin, Zurich</div>
+      <div class="exp-desc">Completed foundational commercial apprenticeship in luxury retail sales, learning client service standards, product presentation, and front-of-house hospitality.</div>
+    </div>
+  </div>
+
+  
+  <div class="section">
+    <div class="section-title">Education &amp; Certifications</div>
+    <div class="education">Business English Certificate Preliminary (Cambridge); Turkish/German Translator Certification for Health Tourism (Ankara University)</div>
+  </div>
+</div>
+
+<!-- Client feedback — posts to the Apps Script; hidden when printing -->
+<div class="feedback" id="fb">
+  <div class="fb-title">Your verdict on Deniz Tunbeceren</div>
+  <div class="fb-sub">One click. It reaches your recruiter immediately and stays private.</div>
+  <div class="fb-btns">
+    <button type="button" class="fb-btn fb-yes" data-v="interested">Interested</button>
+    <button type="button" class="fb-btn fb-maybe" data-v="maybe">Maybe</button>
+    <button type="button" class="fb-btn fb-no" data-v="pass">Pass</button>
+  </div>
+  <textarea class="fb-note" id="fb-note" placeholder="Optional — what stood out, or what is missing?"></textarea>
+  <div class="fb-status" id="fb-status"></div>
+</div>
+<script>
+(function () {
+  var url = "https://script.google.com/macros/s/AKfycbwdqzv0_wn58zEJmYd_H7si5B0jBzFKFKQs_ttyDjs5BmTTzIqGISq9rtqjZiuv1u3ysg/exec";
+  var meta = {"candidateId":"muxz5060-ig5k0u7","sheetRowIndex":2,"roleSlug":"permanent-executive-assistant-zurich","roleTitle":"Permanent Executive Assistant – Private Client Advisory | Financial Services (Zurich)","candidateName":"Deniz Tunbeceren","client":"Appoint Group"};
+  var box = document.getElementById('fb');
+  if (!box) return;
+  if (!url) { box.style.display = 'none'; return; }
+  var status = document.getElementById('fb-status');
+  var btns = box.querySelectorAll('.fb-btn');
+  function setDisabled(on) { for (var j = 0; j < btns.length; j++) btns[j].disabled = on; }
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener('click', function () {
+      var verdict = this.getAttribute('data-v');
+      setDisabled(true);
+      status.textContent = 'Sending…';
+      var payload = { action: 'profileFeedback', verdict: verdict, comment: (document.getElementById('fb-note').value || '').slice(0, 1000), at: new Date().toISOString() };
+      for (var k in meta) payload[k] = meta[k];
+      fetch(url, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(payload) })
+        .then(function (r) { return r.text(); })
+        .then(function () { status.textContent = 'Thank you — your verdict has been recorded.'; box.className += ' fb-done'; })
+        .catch(function () { status.textContent = 'Could not send. Please try again or reply by email.'; setDisabled(false); });
+    });
+  }
+})();
+</script>
+
+<!-- Footer -->
+<div class="footer-wrap">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <div class="footer-brand">Prepared by Appoint Group</div>
+      <div class="footer-sub">19 October 2026 &middot; Confidential</div>
+    </div>
+    
+  </div>
+</div>
+<div class="footer-notice">This document is confidential and intended solely for the recipient. Please do not redistribute without prior consent.<br/>Candidate personal data is processed in accordance with applicable data protection regulations (GDPR).</div>
+
+</div>
+</body></html>
